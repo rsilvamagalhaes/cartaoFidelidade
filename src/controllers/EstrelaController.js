@@ -7,7 +7,6 @@ module.exports = {
         const estrelas = await Estrelas.find({idVenda : req.params.idVenda});
         return res.json(estrelas);
     },
-
     async salvar(req, res) {
         const estrela = await Estrelas.create(req.body);
         return res.json(estrela); 
