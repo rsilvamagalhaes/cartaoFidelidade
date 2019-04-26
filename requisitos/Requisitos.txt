@@ -1,0 +1,10 @@
+
+
+# Sistema de Fidelidade #
+
+
+Inserir Vendas
+Alterar Vendas
+Consultar Vendas
+
+Consultar Estrelas
