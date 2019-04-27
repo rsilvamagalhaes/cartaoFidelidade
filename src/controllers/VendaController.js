@@ -31,4 +31,5 @@ module.exports = {
         await Venda.findByIdAndRemove(req.params.id);
         return res.send();
     }
+    
 }

@@ -4,7 +4,7 @@ const BodyParser = require("body-parser");
 
 const requireDir = require("require-dir");
 
-const CONNECTION_URL = "mongodb+srv://dbFidelidade:HQPTVWan32zH6Jy@cluster0-fnldm.mongodb.net/test?retryWrites=true";
+const CONNECTION_URL = "mongodb+srv://dbFidelidade:HQPTVWan32zH6Jy@cluster0-fnldm.mongodb.net/dbFidelidade?retryWrites=true";
 const DATABASE_NAME = "dbFidelidade";
 
 var app = express(); 

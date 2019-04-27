@@ -13,10 +13,12 @@ const EstrelaSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
+        default: Date.now,
     },
     descricao: {
         type : String
     },
 
 });
+EstrelaSchema.plugin(mongoosePaginate);
 mongoose.model("Estrelas", EstrelaSchema);

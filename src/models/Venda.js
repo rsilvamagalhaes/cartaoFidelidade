@@ -19,18 +19,6 @@ const VendaSchema = new mongoose.Schema({
         type : schema.Types.Number,
         required: true,
     },
-    estrelas: [{
-        qtd: {
-            type : schema.Types.Number,
-            required: true,
-        },
-        createdAt: {
-            type: Date,
-        },
-        descricao: {
-            type : String
-        },
-    }],
     createdAt: {
         type: Date,
         default: Date.now,
