@@ -10,10 +10,17 @@ module.exports = {
         return res.json(vendas);
     },
 
-    async buscarBy(req, res) {
-        console.log("Buscando por " + req.params.telefone);
+    async buscarByTelefone(req, res) {
+        console.log("Buscando por telefone " + req.params.telefone);
         const {page = 1} = req.query;
         const vendas = await Venda.paginate({telefone : req.params.telefone}, {page, limit : 5});
+        return res.json(vendas);
+    },
+
+    async buscarById(req, res) {
+        console.log("Buscando por idVEnda " + req.params.idVenda);
+        const {page = 1} = req.query;
+        const vendas = await Venda.paginate({_id : req.params.idVenda}, {});
         return res.json(vendas);
     },
 

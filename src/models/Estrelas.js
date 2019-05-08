@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 const mongoosePaginate = require("mongoose-paginate");
+const timeZone = require('mongoose-timezone');
 
 const EstrelaSchema = new mongoose.Schema({
     _idVenda: {
@@ -20,5 +21,6 @@ const EstrelaSchema = new mongoose.Schema({
     },
 
 });
+EstrelaSchema.plugin(timeZone);
 EstrelaSchema.plugin(mongoosePaginate);
 mongoose.model("Estrelas", EstrelaSchema);

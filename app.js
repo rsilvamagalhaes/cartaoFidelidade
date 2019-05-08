@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const BodyParser = require("body-parser");
+const cors = require('cors');
 
 const requireDir = require("require-dir");
 
@@ -9,6 +10,7 @@ const DATABASE_NAME = "dbFidelidade";
 
 var app = express(); 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(CONNECTION_URL + "/" + DATABASE_NAME, { useNewUrlParser: true }, (error, client) => {
     if(error) {
@@ -19,5 +21,5 @@ mongoose.connect(CONNECTION_URL + "/" + DATABASE_NAME, { useNewUrlParser: true }
 
 requireDir('./src/models');
 
-app.listen(3000);
+app.listen(3001);
 app.use('/api', require("./src/routes"))
