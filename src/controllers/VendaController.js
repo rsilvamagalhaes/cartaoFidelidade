@@ -26,7 +26,12 @@ module.exports = {
 
     async salvar(req, res) {
         const venda = await Venda.create(req.body);
-        return res.json(venda); 
+        
+        print('teste ' + venda)
+        
+        // return res.json(venda); 
+    
+        return 'salvando'
     },
  
     async atualizar(req, res) {

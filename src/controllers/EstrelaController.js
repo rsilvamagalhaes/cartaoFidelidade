@@ -1,24 +1,24 @@
 const mongoose = require("mongoose");
-const Estrelas =  mongoose.model('Estrelas'); 
+const Estrela =  mongoose.model('Estrela'); 
 
 module.exports = {
 
     async salvar(req, res) {
         console.log("Salvando estrela ");
-        const estrela = await Estrelas.create(req.body);
+        const estrela = await Estrela.create(req.body);
         return res.json(estrela); 
     },
     async buscarDetalheEstrela(req, res) {
         console.log("Buscando por " + req.params.idVenda);
-        const estrelas = await Estrelas.find();
-        return res.json(estrelas);
+        const estrela = await Estrela.find();
+        return res.json(estrela);
     },
     async buscarTotal(req, res) {
         console.log("Buscando por " + req.params.idVenda);
-        const estrelas = await Estrelas.find();
+        const estrela = await Estrela.find();
 
-        //Soma o total de estrelas
-        totalEstrela = estrelas.reduce(function(valor, estrela){
+        //Soma o total de estrela
+        totalEstrela = estrela.reduce(function(valor, estrela){
             return valor + estrela.qtd;
         }, 0);
 
