@@ -1,3 +1,7 @@
+/**
+ * run project $ npm run dev  
+ */
+
 const mongoose = require("mongoose");
 const express = require("express");
 const BodyParser = require("body-parser");
@@ -12,7 +16,7 @@ var app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(CONNECTION_URL + "/" + DATABASE_NAME, { useNewUrlParser: true }, (error, client) => {
+mongoose.connect(CONNECTION_URL + "/" + DATABASE_NAME, { useNewUrlParser: true , useUnifiedTopology: true}, (error, client) => {
     if(error) {
         throw error;
     }

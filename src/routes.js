@@ -11,8 +11,8 @@ routes.post('/venda', VendaController.salvar);
 routes.put('/venda/:id', VendaController.atualizar);
 routes.delete('/venda/:id', VendaController.remover);
 
-routes.get('/estrela/:idVenda/detalhe', EstrelaController.buscarDetalheEstrela);
-routes.get('/estrela/:idVenda', EstrelaController.buscarTotal);
-routes.post('/estrela', EstrelaController.salvar);
+// routes.get('/estrela/:idVenda/detalhe', EstrelaController.buscarDetalheEstrela);
+// routes.get('/estrela/:idVenda', EstrelaController.buscarTotal);
+// routes.post('/estrela', EstrelaController.salvar);
 
 module.exports = routes;
