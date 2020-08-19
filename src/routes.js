@@ -4,7 +4,9 @@ const routes = express.Router();
 const VendaController = require("./controllers/VendaController");
 const EstrelaController = require("./controllers/EstrelaController");
 
-routes.get('/venda/telefone/:telefone', VendaController.buscarByTelefone);
+routes.get('/estrelas/:telefone', VendaController.buscarEstrelaByTelefone);
+routes.get('/teste', VendaController.teste);
+routes.get('/venda/:telefone', VendaController.buscarVendaByTelefone);
 routes.get('/venda/:idVenda', VendaController.buscarById);
 routes.get('/venda', VendaController.buscar);
 routes.post('/venda', VendaController.salvar);

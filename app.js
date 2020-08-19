@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const BodyParser = require("body-parser");
 const cors = require('cors');
+const corsLocal = require('./src/config/cors')
 
 const requireDir = require("require-dir");
 
@@ -15,6 +16,7 @@ const DATABASE_NAME = "dbFidelidade";
 var app = express(); 
 app.use(express.json());
 app.use(cors());
+app.use(corsLocal);
 
 mongoose.connect(CONNECTION_URL + "/" + DATABASE_NAME, { useNewUrlParser: true , useUnifiedTopology: true}, (error, client) => {
     if(error) {
